@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Starry Night Website Banner Animation </title>
+</head>
+<body>
+    <div class="sence">
+        <div class="moon"> </div>
+        <img src="img/forest.png" class="forest">
+        <img src="img/cloud1(1).png" class="cloud1">
+        <img src="img/cloud2(1).png" class="cloud2">
+        <img src="img/cloud3(1).png" class="cloud3">
+        <img src="img/cloud1(1).png" class="cloud4">
+        <img src="img/cloud2(1).png" class="cloud5">
+        <img src="img/cloud3(1).png" class="cloud6">
+       
+    </div>
+
+    <script type="text/javascript">
+        function stars(){
+
+            let count = 500;
+            let sence = document.querySelector('.sence');
+            let i=0
+            while(i<count){
+                let star = document.createElement("i");
+                let x = Math.floor(Math.random() * window.innerWidth);
+                let y = Math.floor(Math.random() * window.innerHeight);
+                let duration = Math.random() * 10;
+                let size = Math.random() * 2;
+
+
+                star.style.left = x + 'px';
+                star.style.top = y + 'px';
+                star.style.width = 1+size +'px';
+                star.style.height = 1+size + 'px';
+
+                star.style.animationDuration  = 5+duration +'s';
+                star.style.animationDelay  = duration+ 's';
+
+                sence.appendChild(star);
+                i++;
+
+            }
+        }
+        stars()
+    </script>
+    
+</body>
+</html>
